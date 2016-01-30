@@ -3,5 +3,6 @@
   "ApiNameAllCapital":"ACCOUNT",
   "ProjectPath":"github.com/your_org/account",
   "ApiNameExported":"Account",
-  "TableName":"accounts"
+  "TableName":"accounts",
+  "Org":"your_org"
 }

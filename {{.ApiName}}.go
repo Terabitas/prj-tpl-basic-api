@@ -21,7 +21,7 @@ func Register(userName string, email string) (result bool, err error) {
 		return false, err
 	}
 
-	collection := session.DB(registry.GetDatabaseName()).C(provision.TABLE_ACCOUNTS)
+	collection := session.DB(registry.GetDatabaseName()).C(provision.TABLE_NAME)
 	err = collection.Insert(acc)
 
 	if err != nil {
