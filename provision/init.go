@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"bitbucket.org/nildev/lib/registry"
+	"github.com/nildev/lib/registry"
 	"gopkg.in/mgo.v2"
 )
 

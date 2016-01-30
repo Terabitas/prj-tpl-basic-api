@@ -4,5 +4,6 @@
   "ProjectPath":"github.com/your_org/account",
   "ApiNameExported":"Account",
   "TableName":"accounts",
-  "Org":"your_org"
+  "Org":"your_org",
+  "FullAuthor":"Tomas Bartkus <to.bartkus@gmail.com>",
 }
