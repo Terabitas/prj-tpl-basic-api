@@ -1,9 +1,6 @@
 package {{.ApiName}} // import "{{.ProjectPath}}"
 
 import (
-	"os"
-
-	"gopkg.in/mgo.v2/bson"
 	"{{.ProjectPath}}/provision"
 	"bitbucket.org/nildev/lib/registry"
 )
