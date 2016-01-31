@@ -1,3 +1,12 @@
+# API container
+{{.ApiName}}:
+  image: {{.Org}}/{{.ApiName}}:latest
+  container_name: {{.ApiName}}.{{.Org}}
+  ports:
+      - 80:8080
+  env_file: .env
+
+# Custom services required for development
 mongo:
   image: mongo:3.0.8
   container_name: mongodb.{{.ApiName}}.{{.Org}}
