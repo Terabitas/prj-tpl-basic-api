@@ -2,7 +2,7 @@ package {{.ApiName}} // import "{{.ProjectPath}}"
 
 import (
 	"{{.ProjectPath}}/provision"
-	"bitbucket.org/nildev/lib/registry"
+	"github.com/nildev/lib/registry"
 )
 
 func Register(userName string, email string) (result bool, err error) {

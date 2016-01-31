@@ -2,7 +2,6 @@ package provision
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/nildev/lib/registry"
 	"gopkg.in/mgo.v2"
@@ -15,7 +14,7 @@ var (
 // NildevInitMongoDB init
 func NildevInitMongoDB() {
 	// In which environment we are
-	env := os.Getenv("ND_{{.ApiNameAllCapital}}_ENV")
+	env := registry.GetEnv()
 	fmt.Printf("%s", env)
 
 	session, err := registry.GetMongoDBClient()
