@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  # Custom services required for development
+  mongo:
+    image: mongo:3.0.8
+    container_name: mongodb.{{.ApiName}}.{{.Org}}
+    ports:
+      - 27017:27017

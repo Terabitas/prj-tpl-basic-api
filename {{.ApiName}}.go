@@ -1,34 +1,25 @@
 package {{.ApiName}} // import "{{.ProjectPath}}"
 
 import (
-	"{{.ProjectPath}}/provision"
 	"github.com/nildev/lib/registry"
 )
 
-func Register(userName string, email string) (result bool, err error) {
+// Register method
+// @path /custom-register/{provider}
+// @method POST
+// @query {userName:[a-z]+}
+func Register(provider string, userName string) (result bool, err error) {
 
-	if err != nil {
-		return false, err
-	}
-
-	acc := map[string]string{"u":userName, "e":email}
-
-	session, err := registry.GetMongoDBClient()
-	if err != nil {
-		return false, err
-	}
-
-	collection := session.DB(registry.GetDatabaseName()).C(provision.TABLE_NAME)
-	err = collection.Insert(acc)
-
-	if err != nil {
-		return false, err
-	}
+	// your logic here
 
 	return true, nil
 }
 
-func AuthByEmail(email string, password string) (result bool, err error) {
+// ProtectedResource method which should return only if user passes valid JWT token
+// nildev will set `user` variable and will set to it whatever is in JWT Claims token
+// @path /protected
+// @protected
+func ProtectedResource(user registry.User) (result bool, err error) {
 	return true, nil
 }
 

@@ -17,7 +17,7 @@ func NildevInitMongoDB() {
 	env := registry.GetEnv()
 	fmt.Printf("%s", env)
 
-	session, err := registry.GetMongoDBClient()
+	session, err := registry.CreateMongoDBClient()
 	if err != nil {
 		fmt.Printf("%s", err)
 	}
@@ -27,38 +27,10 @@ func NildevInitMongoDB() {
 	if err != nil {
 		fmt.Printf("%s", err)
 	}
-
-	usernameIndex := mgo.Index{
-		Key:        []string{"username"},
-		Unique:     true,
-		DropDups:   false,
-		Background: true,
-		Sparse:     true,
-	}
-
-	err = session.DB(registry.GetDatabaseName()).C(TABLE_NAME).EnsureIndex(usernameIndex)
-
-	if err != nil {
-		fmt.Printf("%s", err)
-	}
-
-	emailIndex := mgo.Index{
-		Key:        []string{"email"},
-		Unique:     true,
-		DropDups:   false,
-		Background: true,
-		Sparse:     true,
-	}
-
-	err = session.DB(registry.GetDatabaseName()).C(TABLE_NAME).EnsureIndex(emailIndex)
-
-	if err != nil {
-		fmt.Printf("%s", err)
-	}
 }
 
 func DestroyMongoDB() {
-	session, err := registry.GetMongoDBClient()
+	session, err := registry.CreateMongoDBClient()
 	if err != nil {
 		fmt.Printf("%s", err)
 	}
