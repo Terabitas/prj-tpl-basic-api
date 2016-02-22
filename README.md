@@ -33,7 +33,7 @@ docker-compose -f docker-compose.yml up -d
 
 Execute HTTP request:
 ```
-curl -X GET  http://YOUR_DOCKER_MACHINE_IP:8080/api/v1/custom-register/github?userName=nildev -v
+curl -X POST http://YOUR_DOCKER_MACHINE_IP/api/v1/custom-register/github?userName=nildev -v
 ```
 
 ## Project Details

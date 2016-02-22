@@ -6,6 +6,10 @@
 	],
 	"Deps": [
 		{
+			"ImportPath": "github.com/golang/glog",
+			"Rev": "44145f04b68cf362d9c4df2182967c2275eaefed"
+		},
+		{
 			"ImportPath": "github.com/golang/protobuf/proto",
 			"Rev": "b982704f8bb716bb608144408cff30e15fbde841"
 		},
@@ -24,6 +28,10 @@
 		{
 			"ImportPath": "github.com/nildev/lib/registry",
 			"Rev": "b073484ec1b6d967d5450865be13b148db5c783b"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
+			"Rev": "c84e1f8e3a7e322d497cd16c0e8a13c7e127baf3"
 		},
 		{
 			"ImportPath": "golang.org/x/net/context",
@@ -46,6 +54,14 @@
 			"Rev": "8a57ed94ffd43444c0879fe75701732a38afc985"
 		},
 		{
+			"ImportPath": "google.golang.org/api/bigquery/v2",
+			"Rev": "ad6c2cd766aa31d72fe3fce08189e0ba6e5002b9"
+		},
+		{
+			"ImportPath": "google.golang.org/api/container/v1",
+			"Rev": "ad6c2cd766aa31d72fe3fce08189e0ba6e5002b9"
+		},
+		{
 			"ImportPath": "google.golang.org/api/gensupport",
 			"Rev": "ad6c2cd766aa31d72fe3fce08189e0ba6e5002b9"
 		},
@@ -54,7 +70,15 @@
 			"Rev": "ad6c2cd766aa31d72fe3fce08189e0ba6e5002b9"
 		},
 		{
+			"ImportPath": "google.golang.org/api/logging/v1beta3",
+			"Rev": "ad6c2cd766aa31d72fe3fce08189e0ba6e5002b9"
+		},
+		{
 			"ImportPath": "google.golang.org/api/pubsub/v1",
+			"Rev": "ad6c2cd766aa31d72fe3fce08189e0ba6e5002b9"
+		},
+		{
+			"ImportPath": "google.golang.org/api/storage/v1",
 			"Rev": "ad6c2cd766aa31d72fe3fce08189e0ba6e5002b9"
 		},
 		{
@@ -77,6 +101,10 @@
 			"ImportPath": "gopkg.in/mgo.v2",
 			"Comment": "r2015.12.06-2-g03c9f3e",
 			"Rev": "03c9f3ee4c14c8e51ee521a6a7d0425658dd6f64"
+		},
+		{
+			"ImportPath": "gopkg.in/tomb.v2",
+			"Rev": "14b3d72120e8d10ea6e6b7f87f7175734b1faab8"
 		}
 	]
 }
